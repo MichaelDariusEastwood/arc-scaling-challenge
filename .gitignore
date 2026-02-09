@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+
+# R
+.Rhistory
+.Rdata
+.RData
+.Ruserdata
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Data (large files)
+*.csv.gz
+*.json.gz
+
+# Temporary
+*.tmp
+*.temp
+*.log
