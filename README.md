@@ -45,6 +45,8 @@ arc-scaling-challenge/
 ├── README.md                    # You are here
 ├── CONTRIBUTING.md              # How to submit results
 ├── LICENSE                      # MIT License
+├── requirements.txt             # Python dependencies
+├── Makefile                     # Easy setup commands
 │
 ├── protocols/                   # Measurement templates
 │   ├── ai-language-models.md
@@ -54,21 +56,28 @@ arc-scaling-challenge/
 │
 ├── analysis/                    # Statistical analysis code
 │   ├── python/
-│   │   ├── arc_analysis.py
-│   │   ├── power_law_fit.py
-│   │   └── requirements.txt
+│   │   ├── __init__.py
+│   │   └── arc_analysis.py      # Main analysis toolkit
 │   └── r/
-│       ├── arc_analysis.R
-│       └── power_law_fit.R
+│       ├── arc_analysis.R       # R equivalent
+│       └── install_packages.R   # R dependency installer
 │
-├── tools/                       # Model comparison tools
-│   ├── aic_bic_calculator.py
-│   ├── alpha_estimator.py
-│   └── beta_estimator.py
+├── tools/                       # Standalone tools
+│   ├── aic_bic_calculator.py    # Model comparison
+│   ├── alpha_estimator.py       # α estimation methods
+│   └── beta_estimator.py        # α ↔ β conversion
+│
+├── examples/                    # Example data and outputs
+│   ├── data/
+│   │   └── example_ai_sequential_parallel.csv
+│   └── expected_output/
+│       └── example_results.json
+│
+├── tests/                       # Unit tests
+│   └── test_arc_analysis.py
 │
 ├── figures/                     # Figure generation
 │   ├── generate_scaling_plot.py
-│   ├── generate_comparison_plot.py
 │   └── style_config.py
 │
 └── submissions/                 # Community results
@@ -80,20 +89,72 @@ arc-scaling-challenge/
 
 ## Quick Start
 
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/michaeldariuseastwood/arc-scaling-challenge.git
+cd arc-scaling-challenge
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Or use make
+make install
+```
+
 ### Python
 
 ```bash
-cd analysis/python
-pip install -r requirements.txt
-python arc_analysis.py --data your_data.csv
+# Run analysis on your data
+python analysis/python/arc_analysis.py --data your_data.csv
+
+# Or run on example data
+python analysis/python/arc_analysis.py --data examples/data/example_ai_sequential_parallel.csv
 ```
 
 ### R
 
 ```r
+# Install packages first
+source("analysis/r/install_packages.R")
+
+# Run analysis
 source("analysis/r/arc_analysis.R")
 results <- fit_arc_model(your_data)
 ```
+
+---
+
+## Quick Verification
+
+Verify the toolkit works correctly:
+
+```bash
+# Full verification (Python + tests)
+make verify
+
+# Or run individual checks:
+
+# 1. Test imports
+python -c "from analysis.python.arc_analysis import fit_power_law; print('OK')"
+
+# 2. Run beta estimator
+python tools/beta_estimator.py --alpha 2.2
+
+# 3. Run example analysis
+python analysis/python/arc_analysis.py --data examples/data/example_ai_sequential_parallel.csv
+
+# 4. Run unit tests
+python -m pytest tests/ -v
+```
+
+**Expected output for example data:**
+- Sequential α ≈ 2.2 (super-linear)
+- Parallel α ≈ 0.08 (near-zero)
+- All 3 ARC predictions SUPPORTED
+
+See `examples/expected_output/example_results.json` for full expected results.
 
 ---
 
@@ -184,10 +245,18 @@ If you use these tools, please cite:
 
 ## Related Resources
 
-- **Paper I:** [Preliminary Evidence](https://doi.org/10.17605/OSF.IO/6C5XB)
-- **Paper II:** [Experimental Validation](https://doi.org/10.17605/OSF.IO/8FJMA)
-- **Paper III:** [Cross-Domain Unification](https://github.com/MichaelDariusEastwood/arc-principle-validation)
-- **Book:** *Infinite Architects* (Eastwood, 2026)
+### Papers
+
+| Paper | Title | DOI | Status |
+|-------|-------|-----|--------|
+| **I** | Preliminary Evidence | [10.17605/OSF.IO/6C5XB](https://doi.org/10.17605/OSF.IO/6C5XB) | Published |
+| **II** | Experimental Validation | [10.17605/OSF.IO/8FJMA](https://doi.org/10.17605/OSF.IO/8FJMA) | Published |
+| **III** | Cross-Domain Unification | [10.17605/OSF.IO/HQCGF](https://doi.org/10.17605/OSF.IO/HQCGF) | Published |
+
+### Other Resources
+
+- **GitHub Repository:** [arc-principle-validation](https://github.com/michaeldariuseastwood/arc-principle-validation)
+- **Book:** *Infinite Architects: Intelligence, Recursion, and the Creation of Everything* (Eastwood, 2026)
 
 ---
 

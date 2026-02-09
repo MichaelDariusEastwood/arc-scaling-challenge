@@ -243,10 +243,10 @@ def estimate_beta(alpha: float) -> float:
     return beta
 
 
-def test_arc_predictions(results_sequential: Dict,
-                         results_parallel: Dict) -> Dict:
+def check_arc_predictions(results_sequential: Dict,
+                          results_parallel: Dict) -> Dict:
     """
-    Test ARC Principle predictions against measured results.
+    Check ARC Principle predictions against measured results.
 
     Predictions:
     - P1: Sequential α > 1
@@ -348,9 +348,9 @@ def analyze_data(filepath: str, condition_col: str = 'condition',
             'R_range': [float(R.min()), float(R.max())]
         }
 
-    # Test predictions if both conditions present
+    # Check predictions if both conditions present
     if 'sequential' in results and 'parallel' in results:
-        results['prediction_tests'] = test_arc_predictions(
+        results['prediction_tests'] = check_arc_predictions(
             results['sequential']['fit'],
             results['parallel']['fit']
         )
