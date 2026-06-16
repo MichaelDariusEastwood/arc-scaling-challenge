@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it using the metadata below, and cite the related prior art where relevant."
+title: "ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws"
+abstract: "An open toolkit and protocol set for independently testing and attempting to falsify the ARC Principle's claims about sequential versus parallel recursion scaling."
+type: software
+authors:
+  - family-names: Eastwood
+    given-names: Michael Darius
+    website: "https://www.michaeldariuseastwood.com"
+    city: London
+    country: GB
+version: "2026.03"
+date-released: 2026-03-18
+doi: 10.17605/OSF.IO/6C5XB
+license: MIT
+url: "https://www.michaeldariuseastwood.com/research/"
+repository-code: "https://github.com/MichaelDariusEastwood/arc-scaling-challenge"
+keywords:
+  - scaling laws
+  - test-time compute
+  - sequential reasoning
+  - falsification
+  - ARC Principle
+references:
+  - type: article
+    title: "The Sequential Edge: Inverse-Entropy Voting Beats Parallel Self-Consistency at Matched Compute"
+    authors:
+      - family-names: Sharma
+        given-names: Aman
+      - family-names: Chopra
+        given-names: Paras
+    year: 2025
+    url: "https://arxiv.org/abs/2511.02309"
+    notes: "arXiv:2511.02309 (4 Nov 2025). Independently reports that sequential reasoning outperforms parallel self-consistency at matched compute. Cite for the sequential-vs-parallel result; this toolkit does not claim priority over it."

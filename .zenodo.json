@@ -1,0 +1,20 @@
+{
+  "title": "ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws",
+  "upload_type": "software",
+  "description": "An open toolkit and protocol set for independently testing — and attempting to falsify — claims about sequential versus parallel recursion scaling (the ARC Principle). Provides alpha/beta estimators, AIC/BIC model selection, falsification criteria, reproducible protocols, and synthetic example data. The robust, replicated finding is that the FORM of recursion governs the scaling exponent (parallel alpha ≈ 0; sequential super-linear within architecture); an early single-model estimate (alpha ≈ 2.24, DeepSeek R1) did not replicate cross-architecturally (cross-architecture fit ≈ 0.49). The sequential-beats-parallel result is independently corroborated by Sharma & Chopra (arXiv:2511.02309, 2025) and no priority is claimed for it; the bare d/(d+1) exponent is acknowledged prior art. Researchers are invited to replicate or falsify.",
+  "creators": [
+    { "name": "Eastwood, Michael Darius", "affiliation": "Independent researcher, London, United Kingdom" }
+  ],
+  "keywords": [
+    "scaling laws", "test-time compute", "sequential reasoning", "parallel sampling",
+    "falsification", "ARC Principle", "reproducibility"
+  ],
+  "license": "MIT",
+  "version": "2026.06",
+  "access_right": "open",
+  "related_identifiers": [
+    { "identifier": "10.17605/OSF.IO/6C5XB", "relation": "isSupplementedBy", "scheme": "doi" },
+    { "identifier": "arXiv:2511.02309", "relation": "references", "scheme": "arxiv" }
+  ],
+  "notes": "Companion repository: arc-principle-validation (papers, results, harness). Canonical research hub: https://www.michaeldariuseastwood.com/research/"
+}

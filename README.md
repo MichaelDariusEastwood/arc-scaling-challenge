@@ -7,6 +7,40 @@
 
 ---
 
+## Citation & Prior Art
+
+This repository ships a machine-readable [`CITATION.cff`](CITATION.cff). On GitHub, use the **"Cite this repository"** button in the sidebar (top right of the repository page) to export the citation in APA or BibTeX directly from that file.
+
+**Cite this work as:**
+
+> Eastwood, M.D. (2026). *ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws.* OSF. https://doi.org/10.17605/OSF.IO/6C5XB
+
+```bibtex
+@misc{eastwood2026challenge,
+  author       = {Eastwood, Michael Darius},
+  title        = {ARC Scaling Challenge: An Open Falsification Toolkit for
+                  Recursive-Amplification Scaling Laws},
+  year         = {2026},
+  publisher    = {OSF},
+  doi          = {10.17605/OSF.IO/6C5XB},
+  url          = {https://doi.org/10.17605/OSF.IO/6C5XB}
+}
+```
+
+### Independent corroboration (sequential > parallel)
+
+The central prediction tested by this toolkit (sequential recursion gives α > 1, parallel gives α < 1) is independently corroborated by:
+
+> Sharma, A. & Chopra, P. (2025). *The Sequential Edge: Inverse-Entropy Voting Beats Parallel Self-Consistency at Matched Compute.* arXiv:2511.02309 (4 November 2025). https://arxiv.org/abs/2511.02309
+
+Their work reports, on independent systems and at matched compute, that sequential reasoning outperforms parallel self-consistency. **No priority is claimed for that result here** — it is cited as corroborating prior/parallel art, and the credit for that specific finding belongs to its authors.
+
+### Acknowledged prior art (the geometric exponent)
+
+The geometric scaling exponent `α = d/(d+1)` is **acknowledged prior art**. It follows the dimensional-scaling tradition of West, Brown & Enquist (allometric quarter-power scaling) and related derivations across physics and biology; this programme does not claim to have originated `d/(d+1)`. The contribution claimed here is the **Cauchy unification** — deriving the family of admissible scaling laws from the Cauchy functional equations rather than the `d/(d+1)` exponent itself.
+
+---
+
 ## The Challenge
 
 **Can you falsify the ARC Principle?**
