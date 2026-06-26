@@ -7,6 +7,11 @@
 
 ---
 
+> **New (Jun 2026): [Coupled Co-Scaling Law falsification challenge →](coupled-coscaling/)** — a
+> self-contained, runnable test of the safety threshold **β > k** for recursive self-improvement
+> (Paper X). The harness prints PASS/FAIL against eight predictions and exits non-zero if any
+> falsifier fires. Reference run: 9/9 confirmed, 0 falsifiers. **Can you make it print FAIL?**
+
 ## The Challenge
 
 **Can you falsify the ARC Principle?**
