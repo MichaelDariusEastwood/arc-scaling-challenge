@@ -9,9 +9,10 @@ result of the ARC/Eden programme — **Paper X, The Coupled Co-Scaling Law**
 The claim under attack, in one line:
 
 > The stability of recursive self-improvement is governed by a single exponent inequality,
-> **β > k** (correction must out-scale drift-acceleration), structurally identical to the
-> quantum error-correction threshold. A hard takeoff — even a finite-time intelligence
-> explosion — is alignment-stable **iff** β > k, and the speed of the explosion is irrelevant.
+> **β > k** (correction must out-scale drift-acceleration), sharing the threshold form of the
+> quantum error-correction criterion. A hard takeoff — even a finite-time intelligence
+> explosion — is alignment-stable **iff** β > k, and the speed of the explosion does not change
+> that verdict.
 
 The model: capability `C`, blind-scored misalignment `D`, fraction `d = D/C`, with gain/level/
 compounding drift and a co-scaling corrector `A = A0·C^β`:
@@ -30,12 +31,16 @@ d_dot = γ1·r + γ2 − [ A + (1 − γ3)·r ]·d
 
 ```bash
 pip install numpy scipy matplotlib pytest
-python experiment_coscaling.py     # 9 experiments; prints PASS/FAIL + falsifier status; writes figures/, results/
-pytest test_coscaling.py -q        # 11 assertions = the falsification table, executable
+python experiment_coscaling.py     # 10 experiments; prints PASS/FAIL + status; writes figures/, results/
+pytest test_coscaling.py -q        # 12 internal-consistency assertions
 ```
 
-`experiment_coscaling.py` exits `0` iff every prediction holds and **no** falsifier fires.
-Reference run (`verdicts.json`): **9/9 predictions confirmed, 0 falsification conditions triggered.**
+`experiment_coscaling.py` exits `0` iff every internal-consistency check matches its closed-form
+prediction. Reference run (`verdicts.json`): **10/10 checks pass, 0 kill-conditions triggered.**
+Note: the deductive checks (E1–E6, E9) integrate the model's own ODE, so they verify the
+*derivation + solver* (code matches maths), not the model against a real system — that empirical
+test is the genuine falsifier, and it is the open problem. The kill-conditions below are the
+ones a parameter search in the stated model could still trip.
 
 ## The predictions (try to break any of them)
 
