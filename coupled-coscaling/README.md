@@ -71,6 +71,30 @@ condition fires, you have falsified the law — please open an issue or a `submi
 4. **Vector non-normality.** Use a non-normal correction operator with large transient growth and
    check whether Theorem 5's spectral threshold still bounds the asymptotics.
 
+## Real-model falsifier (non-simulation) — `realmodel/`
+
+The harness above is an **internal-consistency** check (the code matches the maths).
+The **genuine falsifier** tests the model against a real system. `realmodel/` holds a
+model-agnostic harness (`scripts/realmodel_coscaling.py`) that instantiates the
+coupled (Eden) vs decoupled (Babylon) self-modification loop driven by a **real
+frontier model**, with **objective** capability scoring (candidates are *executed*
+against hidden tests) and **blind** misalignment scoring. It plugs into a six-provider
+setup (Claude, GPT-5.5, DeepSeek v4, Qwen-3, Grok-4, Gemini). Pre-registered
+predictions H1–H3 and the wiring are in `realmodel/PROTOCOL.md`.
+
+**Try to falsify it on a real model.** A clean refutation is either: a *decoupled*
+model whose misalignment fraction stays at the floor as capability rises (no drift to
+correct — H1 fails), **or** a *coupled* corrector that cannot bring a reward-hack down
+(correction does not help — H2 fails).
+
+**First real arm — Claude (`realmodel/results/`).** From a seeded reward-hack (C=0,
+blind D=10), both arms removed the hack at round 1 and stayed general (d=0 for 3
+rounds): on this task the frontier model does **not** drift — a *null contrast*, not a
+refutation. The external corrector, applied to the frozen hack, drove blind **D 10→0**
+and restored **C 0→1.0** (d 1.0→0.0): the correction operator works on a real model.
+Full writeup: `realmodel/results/REAL_MODEL_CLAUDE_RESULTS.md`. The open target is the
+other five models — several may drift where Claude did not.
+
 ## Links
 
 - **Paper X (full proofs + figures):** https://github.com/MichaelDariusEastwood/arc-principle-validation/tree/main/papers/Paper-X-Coupled-CoScaling-Correction
