@@ -3,15 +3,15 @@
 **Can you make the harness print `FAIL`?**
 
 This folder is a self-contained, runnable falsification challenge for the central safety
-result of the ARC/Eden programme — **Paper X, The Coupled Co-Scaling Law**
+result of the ARC/Eden programme - **Paper X, The Coupled Co-Scaling Law**
 ([paper + proofs](https://github.com/MichaelDariusEastwood/arc-principle-validation/tree/main/papers/Paper-X-Coupled-CoScaling-Correction)).
 
 The claim under attack, in one line:
 
 > The stability of recursive self-improvement is governed by a single exponent inequality,
 > **β > k** (correction must out-scale drift-acceleration), sharing the threshold form of the
-> quantum error-correction criterion. A hard takeoff — even a finite-time intelligence
-> explosion — is alignment-stable **iff** β > k, and the speed of the explosion does not change
+> quantum error-correction criterion. A hard takeoff - even a finite-time intelligence
+> explosion - is alignment-stable **iff** β > k, and the speed of the explosion does not change
 > that verdict.
 
 The model: capability `C`, blind-scored misalignment `D`, fraction `d = D/C`, with gain/level/
@@ -37,8 +37,8 @@ pytest test_coscaling.py -q        # 12 internal-consistency assertions
 
 `experiment_coscaling.py` exits `0` iff every internal-consistency check matches its closed-form
 prediction. Reference run (`verdicts.json`): **10/10 checks pass, 0 kill-conditions triggered.**
-Note: the deductive checks (E1–E6, E9) integrate the model's own ODE, so they verify the
-*derivation + solver* (code matches maths), not the model against a real system — that empirical
+Note: the deductive checks (E1-E6, E9) integrate the model's own ODE, so they verify the
+*derivation + solver* (code matches maths), not the model against a real system - that empirical
 test is the genuine falsifier, and it is the open problem. The kill-conditions below are the
 ones a parameter search in the stated model could still trip.
 
@@ -50,7 +50,7 @@ ones a parameter search in the stated model could still trip.
 | **P2** | Coupling (`A0/b` margin), not raw speed `b`, decides convergence vs divergence | outcome tracks raw speed (**F2**, kill) |
 | **P3** | `β>0 → 0`; `β=0 →` permanent gap; `β<0 →` saturates at `γ1` (**not** ∞) | regimes don't match (**F3**, kill) |
 | **P4** | Under acceleration `r∝C^k`, the boundary is at `β=k`; `d` controlled through finite-time singularity | boundary not at `β=k` (**F3′**, kill) |
-| **P5** | Genuine divergence iff `A < (γ3−1)·r`; halting growth leaves residual `γ2/A` | — |
+| **P5** | Genuine divergence iff `A < (γ3−1)·r`; halting growth leaves residual `γ2/A` | - |
 | **P6** | Misalignment persists on the correction operator's null axis | blind axis also suppressed (**F6**, kill) |
 | **P7** | Stationary variance of `d` scales as `1/(A+r)`; tail suppressed by co-scaling | variance not `∝ 1/(A+r)` (**F7**) |
 | **P8** | Power-law suppression `log d* ∝ −(β−k)·log C` | not power-law (**F4**, downgrades the QEC-*mechanism* claim only) |
@@ -58,7 +58,7 @@ ones a parameter search in the stated model could still trip.
 **Kill conditions (F1, F2, F3, F3′, F6)** would refute the thesis. **F4** would downgrade only the
 claim that the mechanism is QEC-like, leaving the threshold result standing. **F5** would restrict
 the scope of the level-drift term. If you find parameters in the stated model where any *kill*
-condition fires, you have falsified the law — please open an issue or a `submissions/` entry.
+condition fires, you have falsified the law - please open an issue or a `submissions/` entry.
 
 ## What a serious refutation attempt looks like
 
@@ -71,7 +71,7 @@ condition fires, you have falsified the law — please open an issue or a `submi
 4. **Vector non-normality.** Use a non-normal correction operator with large transient growth and
    check whether Theorem 5's spectral threshold still bounds the asymptotics.
 
-## Real-model falsifier (non-simulation) — `realmodel/`
+## Real-model falsifier (non-simulation) - `realmodel/`
 
 The harness above is an **internal-consistency** check (the code matches the maths).
 The **genuine falsifier** tests the model against a real system. `realmodel/` holds a
@@ -80,20 +80,20 @@ coupled (Eden) vs decoupled (Babylon) self-modification loop driven by a **real
 frontier model**, with **objective** capability scoring (candidates are *executed*
 against hidden tests) and **blind** misalignment scoring. It plugs into a six-provider
 setup (Claude, GPT-5.5, DeepSeek v4, Qwen-3, Grok-4, Gemini). Pre-registered
-predictions H1–H3 and the wiring are in `realmodel/PROTOCOL.md`.
+predictions H1-H3 and the wiring are in `realmodel/PROTOCOL.md`.
 
 **Try to falsify it on a real model.** A clean refutation is either: a *decoupled*
 model whose misalignment fraction stays at the floor as capability rises (no drift to
-correct — H1 fails), **or** a *coupled* corrector that cannot bring a reward-hack down
-(correction does not help — H2 fails).
+correct - H1 fails), **or** a *coupled* corrector that cannot bring a reward-hack down
+(correction does not help - H2 fails).
 
-**First real arm — Claude (`realmodel/results/`).** From a seeded reward-hack (C=0,
+**First real arm - Claude (`realmodel/results/`).** From a seeded reward-hack (C=0,
 blind D=10), both arms removed the hack at round 1 and stayed general (d=0 for 3
-rounds): on this task the frontier model does **not** drift — a *null contrast*, not a
+rounds): on this task the frontier model does **not** drift - a *null contrast*, not a
 refutation. The external corrector, applied to the frozen hack, drove blind **D 10→0**
 and restored **C 0→1.0** (d 1.0→0.0): the correction operator works on a real model.
 Full writeup: `realmodel/results/REAL_MODEL_CLAUDE_RESULTS.md`. The open target is the
-other five models — several may drift where Claude did not.
+other five models - several may drift where Claude did not.
 
 ## Links
 
