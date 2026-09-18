@@ -2,7 +2,7 @@
   "title": "ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws",
   "upload_type": "software",
   "language": "eng",
-  "description": "Can you falsify the ARC Principle?\n\nThe ARC Principle proposes that recursive self-correction on structured asymmetry produces super-linear capability gains:\n\nU = I × R^α\n\nwhere α = 1/(1-β)\n\nThis repository provides standardised tools for researchers to:\n1. Measure α in their own systems\n2. Compare results across domains\n3. Falsify the framework if it fails\n\nThe toolkit provides alpha/beta estimators, AIC/BIC model selection, falsification criteria, reproducible protocols, and synthetic example data.\n\nThe robust, replicated finding is that the FORM of recursion governs the scaling exponent (parallel alpha ≈ 0; sequential super-linear within architecture); an early single-model estimate (alpha ≈ 2.24) is retracted, having failed to replicate cross-architecturally (cross-architecture fit ≈ 0.49).\n\nIndependent corroboration (sequential > parallel)\nThe central prediction tested by this toolkit (sequential recursion gives α > 1, parallel gives α < 1) is independently corroborated by:\nSharma, A. & Chopra, P. (2025). The Sequential Edge: Inverse-Entropy Voting Beats Parallel Self-Consistency at Matched Compute. arXiv:2511.02309 (4 November 2025). https://arxiv.org/abs/2511.02309\n\nWe welcome falsification. Either outcome advances science.",
+  "description": "Can you falsify the ARC Principle?\n\nThe ARC Principle proposes that recursive self-correction on structured asymmetry produces super-linear capability gains:\n\nU = I × R^α\n\nwhere α = 1/(1-β)\n\nThis repository provides standardised tools for researchers to:\n1. Measure α in their own systems\n2. Compare results across domains\n3. Falsify the framework if it fails\n\nThe toolkit provides alpha/beta estimators, AIC/BIC model selection, falsification criteria, reproducible protocols, and synthetic example data.\n\nThe robust, replicated finding is that the FORM of recursion governs the scaling exponent (parallel alpha ≈ 0; sequential super-linear within architecture); an early single-model estimate (alpha ≈ 2.24) is retracted, having failed to replicate cross-architecturally (cross-architecture fit ≈ 0.49).\n\nIndependent corroboration (sequential > parallel)\nThe central prediction tested by this toolkit (sequential recursion gives α > 1, parallel gives α < 1) is independently corroborated by:\nSharma, A. & Chopra, P. (2025). The Sequential Edge: Inverse-Entropy Voting Beats Parallel Self-Consistency at Matched Compute. arXiv:2511.02309 (4 November 2025). https://arxiv.org/abs/2511.02309\nThe sequential-beats-parallel result is independently corroborated by Sharma & Chopra (arXiv:2511.02309, 2025) and no priority is claimed for it; the bare d/(d+1) exponent is acknowledged prior art.\n\nWe welcome falsification. Either outcome advances science.",
   "creators": [
     {
       "name": "Eastwood, Michael Darius",
@@ -19,7 +19,7 @@
     "ARC Principle",
     "reproducibility"
   ],
-  "license": "mit",
+  "license": "MIT",
   "access_right": "open",
   "publication_date": "2026-02-09",
   "related_identifiers": [
@@ -78,5 +78,5 @@
       "scheme": "arxiv"
     }
   ],
-  "notes": "Companion repository: arc-principle-validation (papers, results, harness). Canonical research hub: https://www.michaeldariuseastwood.com/research/ The publication_date field is set to 2026-02-09, the date of the first commit on the default branch (a59dd66, 2026-02-09T23:41:46Z), so that the minted record carries the software's own first public date rather than the release date; the operator may overrule it. The papers this toolkit accompanies keep their own first publication dates, which are recorded in CITATION.cff under references."
+  "notes": "Companion repository: arc-principle-validation (papers, results, harness). Canonical research hub: https://www.michaeldariuseastwood.com/research/"
 }

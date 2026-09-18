@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below and cite the paper it accompanies."
+message: "If you use this work, please cite it using the metadata below, and cite the related prior art where relevant."
 title: "ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws"
 abstract: "An open toolkit and protocol set for independently testing and attempting to falsify the ARC Principle's claims about sequential versus parallel recursion scaling."
 type: software
@@ -10,7 +10,7 @@ authors:
     website: "https://www.michaeldariuseastwood.com"
     city: London
     country: GB
-date-released: 2026-02-09
+date-released: 2026-03-18
 license: MIT
 url: "https://www.michaeldariuseastwood.com/research/"
 repository-code: "https://github.com/MichaelDariusEastwood/arc-scaling-challenge"

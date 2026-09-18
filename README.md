@@ -3,7 +3,7 @@
 **A Global Research Initiative to Test Eastwood's Principle of Recursive Amplification**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2F6C5XB-blue)](https://doi.org/10.17605/OSF.IO/6C5XB)
+[![Programme record](https://img.shields.io/badge/Programme_record-10.17605%2FOSF.IO%2F6C5XB-blue)](https://doi.org/10.17605/OSF.IO/6C5XB)
 
 ---
 
@@ -13,7 +13,7 @@ This repository ships a machine-readable [`CITATION.cff`](CITATION.cff). On GitH
 
 **Cite this work as:**
 
-> Eastwood, M.D. (2026). *ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws.* OSF. https://doi.org/10.17605/OSF.IO/6C5XB
+> Eastwood, M.D. (2026). *ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws.* Part of the ARC Theory programme record on OSF, https://doi.org/10.17605/OSF.IO/6C5XB
 
 ```bibtex
 @misc{eastwood2026challenge,
@@ -22,8 +22,8 @@ This repository ships a machine-readable [`CITATION.cff`](CITATION.cff). On GitH
                   Recursive-Amplification Scaling Laws},
   year         = {2026},
   publisher    = {OSF},
-  doi          = {10.17605/OSF.IO/6C5XB},
-  url          = {https://doi.org/10.17605/OSF.IO/6C5XB}
+  note         = {Part of the ARC Theory programme record,
+                  https://doi.org/10.17605/OSF.IO/6C5XB}
 }
 ```
 
@@ -259,7 +259,7 @@ All submissions must include:
 
 | Submitter | Domain | System | α (Sequential) | α (Parallel) | Status |
 |-----------|--------|--------|----------------|--------------|--------|
-| Eastwood (2026) | AI | DeepSeek R1 | 2.2 [1.5, 3.0], retracted | 0.0 | Retracted, see Paper II |
+| Eastwood (2026) | AI | DeepSeek R1 | 2.2 [1.5, 3.0], retracted | 0.0 | Sequential estimate retracted, see Paper II |
 | — | — | — | — | — | Awaiting submissions |
 
 **Retracted:** the early single-model estimate (α ≈ 2.24, rounded to 2.2) did not replicate cross-architecturally; the cross-architecture fit is ≈ 0.49. Do not quote 2.24 or 2.2 as an established constant. See `RELEASE-NOTES-v1.0.md` and Paper II.
@@ -271,13 +271,11 @@ All submissions must include:
 If you use these tools, please cite:
 
 ```bibtex
-@article{eastwood2026arc,
-  title={Eastwood's ARC Principle: Cross-Domain Unification of
-         Recursive Amplification Across AI, Quantum Computing,
-         and Physics},
+@misc{eastwood2026arc,
+  title={The ARC Theory},
   author={Eastwood, Michael Darius},
   year={2026},
-  publisher={OSF Preprints},
+  publisher={OSF},
   doi={10.17605/OSF.IO/6C5XB}
 }
 ```
