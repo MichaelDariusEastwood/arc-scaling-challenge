@@ -11,7 +11,6 @@ authors:
     city: London
     country: GB
 date-released: 2026-02-09
-doi: 10.17605/OSF.IO/6C5XB
 license: MIT
 url: "https://www.michaeldariuseastwood.com/research/"
 repository-code: "https://github.com/MichaelDariusEastwood/arc-scaling-challenge"
@@ -19,8 +18,10 @@ keywords:
   - scaling laws
   - test-time compute
   - sequential reasoning
+  - parallel sampling
   - falsification
   - ARC Principle
+  - reproducibility
 references:
   - type: article
     title: "The ARC Equation: the Law of Conversion (Paper I)"

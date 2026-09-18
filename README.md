@@ -288,9 +288,9 @@ If you use these tools, please cite:
 
 | Paper | Title | DOI | Status |
 |-------|-------|-----|--------|
-| **I** | Preliminary Evidence | [10.17605/OSF.IO/6C5XB](https://doi.org/10.17605/OSF.IO/6C5XB) | Published |
+| **I** | The ARC Equation: the Law of Conversion (Paper I) | [10.17605/OSF.IO/B6N27](https://doi.org/10.17605/OSF.IO/B6N27) | Published |
 | **II** | Experimental Validation | [10.17605/OSF.IO/8FJMA](https://doi.org/10.17605/OSF.IO/8FJMA) | Published |
-| **III** | Cross-Domain Unification | [10.17605/OSF.IO/HQCGF](https://doi.org/10.17605/OSF.IO/HQCGF) | Published |
+| **III** | The Alignment Scaling Problem: Why External AI Safety Approaches Cannot Scale With Recursive Capability | [10.17605/OSF.IO/HQCGF](https://doi.org/10.17605/OSF.IO/HQCGF) | Published |
 
 ### Other Resources
 
@@ -309,7 +309,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 - **Author:** Michael Darius Eastwood
 - **Email:** michael@michaeldariuseastwood.com
-- **ORCID:** 0009-0003-8483-8512
+- **ORCID:** 0009-0004-3222-7442
 
 ---
 
