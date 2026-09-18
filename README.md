@@ -259,8 +259,10 @@ All submissions must include:
 
 | Submitter | Domain | System | α (Sequential) | α (Parallel) | Status |
 |-----------|--------|--------|----------------|--------------|--------|
-| Eastwood (2026) | AI | DeepSeek R1 | 2.2 [1.5, 3.0] | 0.0 | Paper II |
+| Eastwood (2026) | AI | DeepSeek R1 | 2.2 [1.5, 3.0], retracted | 0.0 | Retracted, see Paper II |
 | — | — | — | — | — | Awaiting submissions |
+
+**Retracted:** the early single-model estimate (α ≈ 2.24, rounded to 2.2) did not replicate cross-architecturally; the cross-architecture fit is ≈ 0.49. Do not quote 2.24 or 2.2 as an established constant. See `RELEASE-NOTES-v1.0.md` and Paper II.
 
 ---
 
