@@ -11,6 +11,7 @@ authors:
     city: London
     country: GB
 date-released: 2026-03-18
+doi: 10.17605/OSF.IO/6C5XB
 license: MIT
 url: "https://www.michaeldariuseastwood.com/research/"
 repository-code: "https://github.com/MichaelDariusEastwood/arc-scaling-challenge"

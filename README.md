@@ -3,17 +3,19 @@
 **A Global Research Initiative to Test Eastwood's Principle of Recursive Amplification**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Programme record](https://img.shields.io/badge/Programme_record-10.17605%2FOSF.IO%2F6C5XB-blue)](https://doi.org/10.17605/OSF.IO/6C5XB)
+[![DOI](https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2F6C5XB-blue)](https://doi.org/10.17605/OSF.IO/6C5XB)
 
 ---
 
 ## Citation & Prior Art
 
+**Note on the identifier:** `10.17605/OSF.IO/6C5XB` is the OSF record for the ARC Theory programme, not an identifier minted for this toolkit. It stands here, and wherever else this README gives it, as the programme record this work belongs to.
+
 This repository ships a machine-readable [`CITATION.cff`](CITATION.cff). On GitHub, use the **"Cite this repository"** button in the sidebar (top right of the repository page) to export the citation in APA or BibTeX directly from that file.
 
 **Cite this work as:**
 
-> Eastwood, M.D. (2026). *ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws.* Part of the ARC Theory programme record on OSF, https://doi.org/10.17605/OSF.IO/6C5XB
+> Eastwood, M.D. (2026). *ARC Scaling Challenge: An Open Falsification Toolkit for Recursive-Amplification Scaling Laws.* OSF. https://doi.org/10.17605/OSF.IO/6C5XB
 
 ```bibtex
 @misc{eastwood2026challenge,
@@ -22,8 +24,8 @@ This repository ships a machine-readable [`CITATION.cff`](CITATION.cff). On GitH
                   Recursive-Amplification Scaling Laws},
   year         = {2026},
   publisher    = {OSF},
-  note         = {Part of the ARC Theory programme record,
-                  https://doi.org/10.17605/OSF.IO/6C5XB}
+  doi          = {10.17605/OSF.IO/6C5XB},
+  url          = {https://doi.org/10.17605/OSF.IO/6C5XB}
 }
 ```
 
@@ -271,11 +273,13 @@ All submissions must include:
 If you use these tools, please cite:
 
 ```bibtex
-@misc{eastwood2026arc,
-  title={The ARC Theory},
+@article{eastwood2026arc,
+  title={Eastwood's ARC Principle: Cross-Domain Unification of
+         Recursive Amplification Across AI, Quantum Computing,
+         and Physics},
   author={Eastwood, Michael Darius},
   year={2026},
-  publisher={OSF},
+  publisher={OSF Preprints},
   doi={10.17605/OSF.IO/6C5XB}
 }
 ```
@@ -290,7 +294,7 @@ If you use these tools, please cite:
 |-------|-------|-----|--------|
 | **I** | The ARC Equation: the Law of Conversion (Paper I) | [10.17605/OSF.IO/B6N27](https://doi.org/10.17605/OSF.IO/B6N27) | Published |
 | **II** | Experimental Validation | [10.17605/OSF.IO/8FJMA](https://doi.org/10.17605/OSF.IO/8FJMA) | Published |
-| **III** | The Alignment Scaling Problem: Why External AI Safety Approaches Cannot Scale With Recursive Capability | [10.17605/OSF.IO/HQCGF](https://doi.org/10.17605/OSF.IO/HQCGF) | Published |
+| **III** | Cross-Domain Unification | [10.17605/OSF.IO/HQCGF](https://doi.org/10.17605/OSF.IO/HQCGF) | Published |
 
 ### Other Resources
 
