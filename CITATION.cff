@@ -6,10 +6,10 @@ type: software
 authors:
   - family-names: Eastwood
     given-names: Michael Darius
+    orcid: "https://orcid.org/0009-0004-3222-7442"
     website: "https://www.michaeldariuseastwood.com"
     city: London
     country: GB
-version: "2026.03"
 date-released: 2026-03-18
 doi: 10.17605/OSF.IO/6C5XB
 license: MIT
@@ -19,9 +19,47 @@ keywords:
   - scaling laws
   - test-time compute
   - sequential reasoning
+  - parallel sampling
   - falsification
   - ARC Principle
+  - reproducibility
 references:
+  - type: article
+    title: "The ARC Equation: the Law of Conversion (Paper I)"
+    authors:
+      - family-names: Eastwood
+        given-names: Michael Darius
+        orcid: "https://orcid.org/0009-0004-3222-7442"
+    doi: 10.17605/OSF.IO/B6N27
+    url: "https://www.michaeldariuseastwood.com/research/papers/paper-i-arc-principle.html"
+    date-published: 2026-01-17
+  - type: article
+    title: "The ARC Equation Measured: Blinded Cross-Architecture Replication and the Retraction of a Super-Linear Estimate"
+    authors:
+      - family-names: Eastwood
+        given-names: Michael Darius
+        orcid: "https://orcid.org/0009-0004-3222-7442"
+    doi: 10.17605/OSF.IO/8FJMA
+    url: "https://www.michaeldariuseastwood.com/research/papers/paper-ii-experimental-validation.html"
+    date-published: 2026-01-22
+  - type: article
+    title: "The Alignment Scaling Problem: Why External AI Safety Approaches Cannot Scale With Recursive Capability"
+    authors:
+      - family-names: Eastwood
+        given-names: Michael Darius
+        orcid: "https://orcid.org/0009-0004-3222-7442"
+    doi: 10.17605/OSF.IO/HQCGF
+    url: "https://www.michaeldariuseastwood.com/research/papers/paper-iii-alignment-scaling-problem.html"
+    date-published: 2026-02-09
+  - type: article
+    title: "The ARC Co-Scaling Law (Paper X)"
+    authors:
+      - family-names: Eastwood
+        given-names: Michael Darius
+        orcid: "https://orcid.org/0009-0004-3222-7442"
+    doi: 10.17605/OSF.IO/BSE2Q
+    url: "https://www.michaeldariuseastwood.com/research/papers/paper-x-coupled-coscaling-correction.html"
+    date-published: 2026-07-03
   - type: article
     title: "The Sequential Edge: Inverse-Entropy Voting Beats Parallel Self-Consistency at Matched Compute"
     authors:

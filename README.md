@@ -9,6 +9,8 @@
 
 ## Citation & Prior Art
 
+**Note on the identifier:** `10.17605/OSF.IO/6C5XB` is the OSF record for the ARC Theory programme, not an identifier minted for this toolkit. It stands here, and wherever else this README gives it, as the programme record this work belongs to.
+
 This repository ships a machine-readable [`CITATION.cff`](CITATION.cff). On GitHub, use the **"Cite this repository"** button in the sidebar (top right of the repository page) to export the citation in APA or BibTeX directly from that file.
 
 **Cite this work as:**
@@ -259,8 +261,10 @@ All submissions must include:
 
 | Submitter | Domain | System | α (Sequential) | α (Parallel) | Status |
 |-----------|--------|--------|----------------|--------------|--------|
-| Eastwood (2026) | AI | DeepSeek R1 | 2.2 [1.5, 3.0] | 0.0 | Paper II |
+| Eastwood (2026) | AI | DeepSeek R1 | 2.2 [1.5, 3.0], retracted | 0.0 | Sequential estimate retracted, see Paper II |
 | — | — | — | — | — | Awaiting submissions |
+
+**Retracted:** the early single-model estimate (α ≈ 2.24, rounded to 2.2) did not replicate cross-architecturally; the cross-architecture fit is ≈ 0.49. Do not quote 2.24 or 2.2 as an established constant. See `RELEASE-NOTES-v1.0.md` and Paper II.
 
 ---
 
@@ -288,7 +292,7 @@ If you use these tools, please cite:
 
 | Paper | Title | DOI | Status |
 |-------|-------|-----|--------|
-| **I** | Preliminary Evidence | [10.17605/OSF.IO/6C5XB](https://doi.org/10.17605/OSF.IO/6C5XB) | Published |
+| **I** | The ARC Equation: the Law of Conversion (Paper I) | [10.17605/OSF.IO/B6N27](https://doi.org/10.17605/OSF.IO/B6N27) | Published |
 | **II** | Experimental Validation | [10.17605/OSF.IO/8FJMA](https://doi.org/10.17605/OSF.IO/8FJMA) | Published |
 | **III** | Cross-Domain Unification | [10.17605/OSF.IO/HQCGF](https://doi.org/10.17605/OSF.IO/HQCGF) | Published |
 
@@ -309,7 +313,7 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 - **Author:** Michael Darius Eastwood
 - **Email:** michael@michaeldariuseastwood.com
-- **ORCID:** 0009-0003-8483-8512
+- **ORCID:** 0009-0004-3222-7442
 
 ---
 
