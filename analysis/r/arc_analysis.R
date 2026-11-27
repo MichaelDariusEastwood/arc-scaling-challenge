@@ -135,19 +135,19 @@ test_arc_predictions <- function(results_seq, results_par) {
 
   tests <- list(
     C1_sequential_superlinear = list(
-      prediction = "α_sequential > 1",
+      condition = "α_sequential > 1",
       result = alpha_seq,
       ci = ci_seq,
       supported = ci_seq[1] > 1
     ),
     C2_parallel_sublinear = list(
-      prediction = "α_parallel < 1",
+      condition = "α_parallel < 1",
       result = alpha_par,
       ci = ci_par,
       supported = ci_par[2] < 1
     ),
     C3_sequential_greater = list(
-      prediction = "α_sequential > α_parallel",
+      condition = "α_sequential > α_parallel",
       difference = alpha_seq - alpha_par,
       supported = alpha_seq > alpha_par,
       strongly_supported = ci_seq[1] > ci_par[2]
@@ -239,7 +239,7 @@ print_arc_summary <- function(results) {
     for (name in c("C1_sequential_superlinear", "C2_parallel_sublinear", "C3_sequential_greater")) {
       test <- pt[[name]]
       status <- ifelse(test$supported, "✓ SUPPORTED", "✗ NOT SUPPORTED")
-      cat(sprintf("  %s: %s\n", test$prediction, status))
+      cat(sprintf("  %s: %s\n", test$condition, status))
     }
 
     cat(sprintf("\nOVERALL: %d/%d checks supported\n",
