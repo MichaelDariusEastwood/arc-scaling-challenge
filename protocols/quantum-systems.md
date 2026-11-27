@@ -12,11 +12,7 @@ This protocol specifies how to measure the scaling exponent α (or Λ) in quantu
 
 ## Background
 
-Google's Willow processor demonstrated exponential error suppression with increasing code distance, achieving Λ ≈ 2.14. The ARC Principle predicts this is an instance of recursive amplification where:
-
-- **I (Base Potential):** Qubit quality / physical error rate
-- **R (Recursive Depth):** Error correction cycles / code distance
-- **α (Scaling):** Error suppression exponent
+Google Quantum AI report quantum error correction below the surface code threshold (the title of their paper; their preprint was public from 24 August 2024, and the paper was published in Nature on 9 December 2024; reference below). The programme reads the result in its own terms, which are not the authors': the physical error rate as base potential (I), the code distance as recursive depth (R), and the suppression exponent as α. That reading is graded convergent timing beside the author's record of 8 December 2024, never a prediction, and this protocol is a measurement design, not a registered test.
 
 ---
 
@@ -132,23 +128,15 @@ code_distance,n_shots,n_success,n_failure,logical_error_rate,physical_error_rate
 
 ---
 
-## Expected Results (If ARC Holds)
+## Expected results
 
-| Metric | Expected Value |
-|--------|----------------|
-| Λ | > 2 (super-linear suppression) |
-| α equivalent | > 1 |
-| Error suppression | Exponential with code distance |
+None is registered. The theory registration names no quantum system.
 
 ---
 
-## Falsification Conditions
+## What a result would show
 
-The ARC Principle is **falsified** for quantum systems if:
-
-1. Λ < 1 consistently (errors grow with code distance)
-2. Λ = 1 exactly (no suppression benefit)
-3. Error suppression is sub-exponential
+No condition here refutes a registered proposition. A result from this design would be reported as a dated observation, at its true size.
 
 ---
 
@@ -158,7 +146,7 @@ If possible, test a condition where error correction cycles do not feed back:
 - Run syndrome extraction but ignore results
 - Apply random corrections instead of computed corrections
 
-**Prediction:** α drops to ≤ 1 when feedback loop is broken
+**What the control asks:** whether the suppression exponent falls when the feedback loop is broken. No value is predicted.
 
 ---
 
@@ -176,5 +164,5 @@ If possible, test a condition where error correction cycles do not feed back:
 
 ## References
 
-- Google Quantum AI (2024). "Quantum error correction below the surface code threshold." *Nature*.
-- Fowler, A. G., et al. (2012). "Surface codes: Towards practical large-scale quantum computation." *Physical Review A*.
+- Google Quantum AI (2024). "Quantum error correction below the surface code threshold." *Nature*. https://doi.org/10.1038/s41586-024-08449-y
+- Fowler, A. G., et al. (2012). "Surface codes: Towards practical large-scale quantum computation." *Physical Review A*. https://doi.org/10.1103/PhysRevA.86.032324

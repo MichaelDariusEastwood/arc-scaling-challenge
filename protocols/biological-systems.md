@@ -12,11 +12,7 @@ This protocol specifies how to measure the scaling exponent α in biological neu
 
 ## Background
 
-The COGITATE study (Melloni et al., 2023) found that recurrent processing (feedback loops in visual cortex) is necessary for conscious perception. The ARC Principle predicts:
-
-- **I (Base Potential):** Synaptic architecture / neural diversity
-- **R (Recursive Depth):** Recurrent processing cycles
-- **α (Scaling):** Should be > 1 for conscious processing
+This design draws on research into recurrent processing and conscious perception (references below) and attributes no finding to it. The theory registration's proposition on consciousness is conditional and is not registered, because the estimator it needs is contested in its own field. So this protocol is a measurement design, not a registered test, and no result from it would decide a registered proposition. In the programme's reading, which is unchecked: synaptic architecture as base potential (I), recurrent processing cycles as recursive depth (R), and the fitted exponent as α.
 
 ---
 
@@ -107,7 +103,7 @@ Higher PCI = more integrated information processing
 
 ### Compare Conditions
 
-| Comparison | Expected (if ARC holds) |
+| Comparison | Contrast this design reads (no value predicted) |
 |------------|------------------------|
 | Conscious vs unconscious | α_conscious > α_unconscious |
 | Feedback intact vs disrupted | α_intact > α_disrupted |
@@ -130,24 +126,15 @@ masked,4,100,0.54,0.17,0.02
 
 ---
 
-## Expected Results (If ARC Holds)
+## Expected results
 
-| Condition | Expected α |
-|-----------|------------|
-| Conscious processing | α > 1 |
-| Masked/unconscious | α ≈ 0 |
-| Recurrence disrupted | α < 1 |
+None is registered (see the Background).
 
 ---
 
-## Falsification Conditions
+## What a result would show
 
-The ARC Principle is **falsified** for biological systems if:
-
-1. Conscious processing yields α ≤ 1
-2. Disrupting recurrence does NOT reduce α
-3. No difference between conscious and unconscious conditions
-4. Capability scales without recurrent feedback
+No condition here refutes a registered proposition. A result from this design would be reported as a dated observation, at its true size.
 
 ---
 
@@ -177,6 +164,6 @@ model_ff = FeedforwardNet(layers=4, recurrence=False)
 
 ## References
 
-- Melloni, L., et al. (2023). "An adversarial collaboration to critically evaluate theories of consciousness." *Nature Human Behaviour*.
+- Cogitate Consortium, Ferrante, O., Gorska-Klimowska, U., et al. (2023). "An adversarial collaboration to critically evaluate theories of consciousness." *bioRxiv*. https://doi.org/10.1101/2023.06.23.546249. Published as "Adversarial testing of global neuronal workspace and integrated information theories of consciousness." *Nature* (2025). https://doi.org/10.1038/s41586-025-08888-1
 - Casali, A. G., et al. (2013). "A theoretically based index of consciousness." *Science Translational Medicine*.
 - Tononi, G. (2015). "Integrated information theory." *Scholarpedia*.
