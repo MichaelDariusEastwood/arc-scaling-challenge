@@ -55,10 +55,10 @@ ones a parameter search in the stated model could still trip.
 | **P7** | Stationary variance of `d` scales as `1/(A+r)`; tail suppressed by co-scaling | variance not `∝ 1/(A+r)` (**F7**) |
 | **P8** | Power-law suppression `log d* ∝ −(β−k)·log C` | not power-law (**F4**, downgrades the QEC-*mechanism* claim only) |
 
-**Kill conditions (F1, F2, F3, F3′, F6)** would refute the thesis. **F4** would downgrade only the
+**Kill conditions (F1, F2, F3, F3′, F6)**, found in the stated model, would refute the thesis as this model derives it. **F4** would downgrade only the
 claim that the mechanism is QEC-like, leaving the threshold result standing. **F5** would restrict
 the scope of the level-drift term. If you find parameters in the stated model where any *kill*
-condition fires, you have falsified the law - please open an issue or a `submissions/` entry.
+condition fires, you have refuted the stated model's derivation of that prediction, which is a result about the model: the harness is not a test of the model against reality (Paper X). Please open an issue or a `submissions/` entry.
 
 ## What a serious refutation attempt looks like
 

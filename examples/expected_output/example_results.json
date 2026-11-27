@@ -1,7 +1,7 @@
 {
   "data_file": "examples/data/example_ai_sequential_parallel.csv",
   "analysis_date": "2026-02-09",
-  "note": "This is SYNTHETIC example data to demonstrate toolkit functionality. For real α ≈ 2.2 results, see Paper II experiments with DeepSeek R1. [Retracted: the early single-model estimate (α ≈ 2.24, rounded to 2.2) did not replicate cross-architecturally; the cross-architecture fit is ≈ 0.49. Do not quote 2.24 or 2.2 as an established constant. See `RELEASE-NOTES-v1.0.md` and Paper II.]",
+  "note": "This is SYNTHETIC example data to demonstrate the toolkit; its numbers describe this file and are not results about any model. The early single-model estimate of about 2.24 (DeepSeek R1) is retracted, and Paper II's later runs give error-decay exponents, which are not the capability exponent of Law I, the ARC Principle. See RELEASE-NOTES-v1.0.md and Paper II.",
   "sequential": {
     "fit": {
       "alpha": 0.883,
@@ -45,7 +45,7 @@
       "ci": [0.715, 1.050],
       "supported": false,
       "strongly_supported": false,
-      "note": "In this synthetic example, α is near 1. Real DeepSeek R1 data shows α ≈ 2.2 [Retracted: the early single-model estimate (α ≈ 2.24, rounded to 2.2) did not replicate cross-architecturally; the cross-architecture fit is ≈ 0.49. Do not quote 2.24 or 2.2 as an established constant. See `RELEASE-NOTES-v1.0.md` and Paper II.]"
+      "note": "In this synthetic example, α is near 1, so the check is not supported. The early single-model estimate of about 2.24 (DeepSeek R1) is retracted."
     },
     "P2_parallel_sublinear": {
       "prediction": "α_parallel < 1",
@@ -66,8 +66,8 @@
       "total_predictions": 3,
       "arc_principle_supported": true,
       "arc_principle_falsified": false,
-      "note": "KEY RESULT: Sequential α significantly exceeds parallel α, demonstrating that recursion architecture matters more than compute amount."
+      "note": "On this synthetic file the sequential exponent exceeds the parallel one, as the file was built to show; it demonstrates the toolkit, not a result about any model."
     }
   },
-  "conclusion": "This synthetic example demonstrates toolkit functionality. The key finding (α_sequential >> α_parallel) is consistent with the ARC Principle. For real experimental data showing α ≈ 2.2, refer to Paper II. [Retracted: the early single-model estimate (α ≈ 2.24, rounded to 2.2) did not replicate cross-architecturally; the cross-architecture fit is ≈ 0.49. Do not quote 2.24 or 2.2 as an established constant. See `RELEASE-NOTES-v1.0.md` and Paper II.]"
+  "conclusion": "This synthetic example demonstrates the toolkit. Its sequential exponent exceeds its parallel one because the file was built that way, which is not evidence for the ARC Principle. The early single-model estimate of about 2.24 (DeepSeek R1) is retracted; see Paper II."
 }
