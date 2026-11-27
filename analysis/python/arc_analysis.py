@@ -289,9 +289,9 @@ def check_arc_predictions(results_sequential: Dict,
     tests['summary'] = {
         'predictions_supported': n_supported,
         'predictions_strongly_supported': n_strongly,
-        'total_predictions': len(tests) - 1,
-        'arc_principle_supported': n_supported >= 2,
-        'arc_principle_falsified': n_supported == 0
+        'total_predictions': len(tests),  # the three checks; the summary is added after this count
+        'majority_of_checks_supported': n_supported >= 2,
+        'no_check_supported': n_supported == 0
     }
 
     return tests
@@ -409,10 +409,10 @@ def main():
         summary = pt['summary']
         print(f"\nOVERALL: {summary['predictions_supported']}/{summary['total_predictions']} "
               f"predictions supported")
-        if summary['arc_principle_supported']:
-            print("→ ARC Principle SUPPORTED by this data")
-        elif summary['arc_principle_falsified']:
-            print("→ ARC Principle FALSIFIED by this data")
+        if summary['majority_of_checks_supported']:
+            print("→ Two or more of this toolkit's three checks are supported on this data. The checks are not the theory registration's propositions, so no verdict on the ARC Principle follows from them.")
+        elif summary['no_check_supported']:
+            print("→ None of this toolkit's three checks is supported on this data. The checks are not the theory registration's propositions, so no verdict on the ARC Principle follows from them.")
 
     print("="*60 + "\n")
 

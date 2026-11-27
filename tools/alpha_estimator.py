@@ -206,9 +206,9 @@ def main():
     # Interpretation
     print("\nINTERPRETATION:")
     if result['alpha'] > 1:
-        print("→ α > 1: SUPER-LINEAR scaling (ARC prediction for sequential)")
+        print("→ α > 1: super-linear in this fit")
     elif result['alpha'] > 0:
-        print("→ 0 < α < 1: SUB-LINEAR scaling (ARC prediction for parallel)")
+        print("→ 0 < α < 1: sub-linear in this fit")
     else:
         print("→ α ≤ 0: No scaling benefit or negative scaling")
 

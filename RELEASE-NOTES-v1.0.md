@@ -1,8 +1,8 @@
-# ARC Scaling Challenge — Release v1.0 (first public release)
+# ARC Scaling Challenge: Release v1.0 (first public release)
 
 **Author:** Michael Darius Eastwood (Independent researcher, London) · **Licence:** MIT · **OSF:** 10.17605/OSF.IO/6C5XB
 
-An open toolkit to test — and attempt to falsify — claims about sequential versus parallel recursion scaling (the ARC Principle).
+An open toolkit to test, and attempt to falsify, claims about sequential versus parallel recursion scaling (the ARC Principle).
 
 ## What's included
 - α / β estimators, AIC/BIC model selection, and falsification criteria (`analysis/`, `tools/`).

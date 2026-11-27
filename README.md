@@ -35,18 +35,18 @@ The central prediction tested by this toolkit (sequential recursion gives α > 1
 
 > Sharma, A. & Chopra, P. (2025). *The Sequential Edge: Inverse-Entropy Voting Beats Parallel Self-Consistency at Matched Compute.* arXiv:2511.02309 (4 November 2025). https://arxiv.org/abs/2511.02309
 
-Their work reports, on independent systems and at matched compute, that sequential reasoning outperforms parallel self-consistency. **No priority is claimed for that result here** — it is cited as corroborating prior/parallel art, and the credit for that specific finding belongs to its authors.
+Their work reports, on independent systems and at matched compute, that sequential reasoning outperforms parallel self-consistency. **No priority is claimed for that result here**: it is cited as corroborating prior and parallel work, and the credit for that specific finding belongs to its authors.
 
 ### Acknowledged prior art (the geometric exponent)
 
-The geometric scaling exponent `α = d/(d+1)` is **acknowledged prior art**. It follows the dimensional-scaling tradition of West, Brown & Enquist (allometric quarter-power scaling) and related derivations across physics and biology; this programme does not claim to have originated `d/(d+1)`. The contribution claimed here is the **Cauchy unification** — deriving the family of admissible scaling laws from the Cauchy functional equations rather than the `d/(d+1)` exponent itself.
+The geometric scaling exponent `α = d/(d+1)` is **acknowledged prior art**. It follows the dimensional-scaling tradition of West, Brown & Enquist (allometric quarter-power scaling) and related derivations across physics and biology; this programme does not claim to have originated `d/(d+1)`. The contribution claimed here is the **Cauchy unification**: deriving the family of admissible scaling laws from the Cauchy functional equations, rather than the `d/(d+1)` exponent itself.
 
 ---
 
-> **New (Jun 2026): [Coupled Co-Scaling Law falsification challenge →](coupled-coscaling/)** — a
-> self-contained, runnable test of the safety threshold **β > k** for recursive self-improvement
-> (Paper X). The harness prints PASS/FAIL against eight predictions and exits non-zero if any
-> falsifier fires. Reference run: 9/9 confirmed, 0 falsifiers. **Can you make it print FAIL?**
+> **New (Jun 2026): [the Coupled Co-Scaling harness →](coupled-coscaling/)**: a
+> self-contained, runnable check of the safety threshold **β > k** for recursive self-improvement
+> (Paper X), as the stated model derives it. It prints PASS or FAIL for each prediction and exits non-zero if
+> any kill condition fires in the model. Its reference run passes every check, which shows that the code implements the model; it is not a test of the model against reality (Paper X). **Can you make it print FAIL?**
 
 ## The Challenge
 

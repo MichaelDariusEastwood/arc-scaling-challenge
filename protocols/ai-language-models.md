@@ -6,7 +6,7 @@
 
 ## Overview
 
-This protocol specifies how to measure the scaling exponent α in large language models under sequential vs parallel recursive conditions.
+This protocol specifies how to measure the error-decay exponent α, which describes how error falls as recursive depth grows, in large language models under sequential and parallel conditions. It is not the capability exponent of Law I, the ARC Principle (Paper II). The protocol was written before the theory registration of 8 September 2026 and is not a registered test.
 
 ---
 
@@ -151,22 +151,15 @@ parallel,8,50,34,16,0.32
 
 ---
 
-## Expected Results (If ARC Holds)
+## Expected results
 
-| Condition | Expected α | 95% CI |
-|-----------|------------|--------|
-| Sequential | α > 1 (super-linear) | [1.0, 3.0] |
-| Parallel | α ≈ 0 (sub-linear) | [-0.5, 0.5] |
+None is registered here. In the theory registration, Law I, the ARC Principle (P1), is supported by a power law in depth that beats the registered rivals and matched breadth, even where its exponent is below one; whether an exponent clears one is a separate registered verdict (P8). The error-decay exponent this protocol measures is not that exponent, so no range is fixed for it in advance.
 
 ---
 
-## Falsification Conditions
+## What a result would show
 
-The ARC Principle is **falsified** for AI systems if:
-
-1. Sequential recursion yields α ≤ 1 consistently
-2. Parallel recursion yields α ≥ 1 consistently
-3. No significant difference between conditions
+No result from this protocol decides a registered proposition, because the registered deciding tests are their own units. A result is reported as a dated observation, at its true size, with its data and code.
 
 ---
 

@@ -159,8 +159,8 @@ test_arc_predictions <- function(results_seq, results_par) {
   tests$summary <- list(
     predictions_supported = n_supported,
     total_predictions = 3,
-    arc_supported = n_supported >= 2,
-    arc_falsified = n_supported == 0
+    majority_of_checks_supported = n_supported >= 2,
+    no_check_supported = n_supported == 0
   )
 
   tests
@@ -245,10 +245,10 @@ print_arc_summary <- function(results) {
     cat(sprintf("\nOVERALL: %d/%d predictions supported\n",
                 pt$summary$predictions_supported, pt$summary$total_predictions))
 
-    if (pt$summary$arc_supported) {
-      cat("→ ARC Principle SUPPORTED by this data\n")
-    } else if (pt$summary$arc_falsified) {
-      cat("→ ARC Principle FALSIFIED by this data\n")
+    if (pt$summary$majority_of_checks_supported) {
+      cat("→ Two or more of this toolkit's three checks are supported on this data. The checks are not the theory registration's propositions, so no verdict on the ARC Principle follows from them.\n")
+    } else if (pt$summary$no_check_supported) {
+      cat("→ None of this toolkit's three checks is supported on this data. The checks are not the theory registration's propositions, so no verdict on the ARC Principle follows from them.\n")
     }
   }
 

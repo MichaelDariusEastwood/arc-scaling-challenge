@@ -80,15 +80,15 @@ def interpret_alpha(alpha: float) -> str:
     elif alpha == 0:
         return "No scaling: Recursion provides no benefit"
     elif alpha < 1:
-        return "Sub-linear (diminishing returns): Parallel/independent processing"
+        return "Sub-linear (diminishing returns) in this fit"
     elif alpha == 1:
         return "Linear scaling: Each step provides constant benefit"
     elif alpha < 2:
-        return "Super-linear (mild): Sequential recursion, moderate β"
+        return "Super-linear (mild) in the model: moderate β_L"
     elif alpha < 4:
-        return "Super-linear (strong): Sequential recursion, high β"
+        return "Super-linear (strong) in the model: high β_L"
     else:
-        return "Super-linear (extreme): Very strong self-referential coupling"
+        return "Super-linear (extreme) in the model: very strong self-referential coupling"
 
 
 def main():

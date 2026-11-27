@@ -64,8 +64,8 @@
       "predictions_supported": 2,
       "predictions_strongly_supported": 2,
       "total_predictions": 3,
-      "arc_principle_supported": true,
-      "arc_principle_falsified": false,
+      "majority_of_checks_supported": true,
+      "no_check_supported": false,
       "note": "On this synthetic file the sequential exponent exceeds the parallel one, as the file was built to show; it demonstrates the toolkit, not a result about any model."
     }
   },

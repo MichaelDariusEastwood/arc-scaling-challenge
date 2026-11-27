@@ -190,8 +190,10 @@ class TestARCPredictions:
         assert result['P1_sequential_superlinear']['supported']
         assert result['P2_parallel_sublinear']['supported']
         assert result['P3_sequential_greater']['supported']
-        assert result['summary']['arc_principle_supported']
-        assert not result['summary']['arc_principle_falsified']
+        assert result['summary']['majority_of_checks_supported']
+        assert not result['summary']['no_check_supported']
+        assert result['summary']['predictions_supported'] == 3
+        assert result['summary']['total_predictions'] == 3
 
     def test_predictions_falsified(self):
         """Test when predictions are falsified."""

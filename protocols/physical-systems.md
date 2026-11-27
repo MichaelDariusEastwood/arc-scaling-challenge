@@ -12,12 +12,7 @@ This protocol specifies how to measure the scaling exponent α in classical phys
 
 ## Background
 
-NYU's acoustic time crystal (Morrell et al., 2026) demonstrated that:
-- **Frozen disorder (I):** Beads of varied sizes create structured asymmetry
-- **Non-reciprocal feedback (R):** Sound waves where F_AB ≠ -F_BA
-- **Emergent order:** Spontaneous temporal oscillation
-
-The ARC Principle predicts this follows U = I × R^α with α > 1.
+Morrell, Elliott and Grier (2026) report a classical time crystal powered by nonreciprocal wave-mediated interactions (the title of their paper; reference below). Whether the ARC Principle applies to such a system has not been checked, and the programme presents no physical system as a test of it, a result or a priority until that check is made. This protocol records a measurement design only, with no registered prediction. In the programme's reading, which is unchecked and is not the authors', frozen disorder would play the part of structured asymmetry (I) and the nonreciprocal coupling the part of recursive feedback (R).
 
 ---
 
@@ -107,11 +102,11 @@ log(Ψ) = log(Ψ_0) + α × log(R)
 
 **Remove frozen disorder:**
 - Use uniform bead sizes
-- Prediction: α drops, no spontaneous order
+- If the unchecked reading above held: α drops, and no spontaneous order forms
 
 **Remove feedback:**
 - Break acoustic coupling
-- Prediction: α → 0, no amplification
+- If the unchecked reading above held: α falls towards zero, with no amplification
 
 ---
 
@@ -129,24 +124,15 @@ high,4,0.55,100,0.05
 
 ---
 
-## Expected Results (If ARC Holds)
+## Expected results
 
-| Condition | Expected α |
-|-----------|------------|
-| High I + feedback | α > 1 (super-linear) |
-| Low I + feedback | α ≈ 1 (linear) |
-| High I + no feedback | α < 1 (sub-linear) |
+None is predicted. The theory registration names no physical system, and the check named in the Background comes first.
 
 ---
 
-## Falsification Conditions
+## What a result would show
 
-The ARC Principle is **falsified** for physical systems if:
-
-1. High I + feedback yields α ≤ 1
-2. Removing I does NOT reduce α
-3. Removing feedback does NOT reduce α
-4. Order emerges without both I and R
+No condition here refutes a registered proposition. A result from this design would be reported as a dated observation, at its true size.
 
 ---
 
@@ -160,4 +146,4 @@ The ARC Principle is **falsified** for physical systems if:
 
 ## References
 
-- Morrell, M., Elliott, L., & Grier, D.G. (2026). "Nonreciprocal wave-mediated interactions power a classical time crystal." *Physical Review Letters*, 136, 057201.
+- Morrell, M., Elliott, L., & Grier, D.G. (2026). "Nonreciprocal wave-mediated interactions power a classical time crystal." *Physical Review Letters*, 136, 057201. https://doi.org/10.1103/zjzk-t81n
