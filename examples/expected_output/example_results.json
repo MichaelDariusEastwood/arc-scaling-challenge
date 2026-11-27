@@ -39,31 +39,31 @@
     "interpretation": "Near-zero scaling (α ≈ 0): Parallel recursion provides minimal benefit"
   },
   "prediction_tests": {
-    "P1_sequential_superlinear": {
-      "prediction": "α_sequential > 1",
+    "C1_sequential_superlinear": {
+      "condition": "α_sequential > 1",
       "result": 0.883,
       "ci": [0.715, 1.050],
       "supported": false,
       "strongly_supported": false,
       "note": "In this synthetic example, α is near 1, so the check is not supported. The early single-model estimate of about 2.24 (DeepSeek R1) is retracted."
     },
-    "P2_parallel_sublinear": {
-      "prediction": "α_parallel < 1",
+    "C2_parallel_sublinear": {
+      "condition": "α_parallel < 1",
       "result": 0.080,
       "ci": [0.076, 0.085],
       "supported": true,
       "strongly_supported": true
     },
-    "P3_sequential_greater": {
-      "prediction": "α_sequential > α_parallel",
+    "C3_sequential_greater": {
+      "condition": "α_sequential > α_parallel",
       "difference": 0.803,
       "supported": true,
       "strongly_supported": true
     },
     "summary": {
-      "predictions_supported": 2,
-      "predictions_strongly_supported": 2,
-      "total_predictions": 3,
+      "checks_supported": 2,
+      "checks_strongly_supported": 2,
+      "total_checks": 3,
       "majority_of_checks_supported": true,
       "no_check_supported": false,
       "note": "On this synthetic file the sequential exponent exceeds the parallel one, as the file was built to show; it demonstrates the toolkit, not a result about any model."

@@ -134,19 +134,19 @@ test_arc_predictions <- function(results_seq, results_par) {
   ci_par <- results_par$alpha_ci
 
   tests <- list(
-    P1_sequential_superlinear = list(
+    C1_sequential_superlinear = list(
       prediction = "α_sequential > 1",
       result = alpha_seq,
       ci = ci_seq,
       supported = ci_seq[1] > 1
     ),
-    P2_parallel_sublinear = list(
+    C2_parallel_sublinear = list(
       prediction = "α_parallel < 1",
       result = alpha_par,
       ci = ci_par,
       supported = ci_par[2] < 1
     ),
-    P3_sequential_greater = list(
+    C3_sequential_greater = list(
       prediction = "α_sequential > α_parallel",
       difference = alpha_seq - alpha_par,
       supported = alpha_seq > alpha_par,
@@ -157,8 +157,8 @@ test_arc_predictions <- function(results_seq, results_par) {
   n_supported <- sum(sapply(tests, function(x) x$supported))
 
   tests$summary <- list(
-    predictions_supported = n_supported,
-    total_predictions = 3,
+    checks_supported = n_supported,
+    total_checks = 3,
     majority_of_checks_supported = n_supported >= 2,
     no_check_supported = n_supported == 0
   )
@@ -236,14 +236,14 @@ print_arc_summary <- function(results) {
   if ("prediction_tests" %in% names(results)) {
     cat("\nPREDICTION TESTS:\n")
     pt <- results$prediction_tests
-    for (name in c("P1_sequential_superlinear", "P2_parallel_sublinear", "P3_sequential_greater")) {
+    for (name in c("C1_sequential_superlinear", "C2_parallel_sublinear", "C3_sequential_greater")) {
       test <- pt[[name]]
       status <- ifelse(test$supported, "✓ SUPPORTED", "✗ NOT SUPPORTED")
       cat(sprintf("  %s: %s\n", test$prediction, status))
     }
 
-    cat(sprintf("\nOVERALL: %d/%d predictions supported\n",
-                pt$summary$predictions_supported, pt$summary$total_predictions))
+    cat(sprintf("\nOVERALL: %d/%d checks supported\n",
+                pt$summary$checks_supported, pt$summary$total_checks))
 
     if (pt$summary$majority_of_checks_supported) {
       cat("→ Two or more of this toolkit's three checks are supported on this data. The checks are not the theory registration's propositions, so no verdict on the ARC Principle follows from them.\n")

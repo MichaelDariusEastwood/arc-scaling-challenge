@@ -246,12 +246,12 @@ def estimate_beta(alpha: float) -> float:
 def check_arc_predictions(results_sequential: Dict,
                           results_parallel: Dict) -> Dict:
     """
-    Check ARC Principle predictions against measured results.
+    Run this toolkit's three checks on the measured results. They are the toolkit's own checks, not the theory registration's propositions.
 
-    Predictions:
-    - P1: Sequential α > 1
-    - P2: Parallel α < 1
-    - P3: Sequential α > Parallel α
+    Checks:
+    - C1: sequential α > 1
+    - C2: parallel α < 1
+    - C3: sequential α > parallel α
     """
     alpha_seq = results_sequential['alpha']
     alpha_par = results_parallel['alpha']
@@ -260,22 +260,22 @@ def check_arc_predictions(results_sequential: Dict,
     ci_par = results_parallel['alpha_ci']
 
     tests = {
-        'P1_sequential_superlinear': {
-            'prediction': 'α_sequential > 1',
+        'C1_sequential_superlinear': {
+            'condition': 'α_sequential > 1',
             'result': alpha_seq,
             'ci': ci_seq,
             'supported': ci_seq[0] > 1,  # Lower CI bound > 1
             'strongly_supported': alpha_seq > 1 and ci_seq[0] > 1
         },
-        'P2_parallel_sublinear': {
-            'prediction': 'α_parallel < 1',
+        'C2_parallel_sublinear': {
+            'condition': 'α_parallel < 1',
             'result': alpha_par,
             'ci': ci_par,
             'supported': ci_par[1] < 1,  # Upper CI bound < 1
             'strongly_supported': alpha_par < 1 and ci_par[1] < 1
         },
-        'P3_sequential_greater': {
-            'prediction': 'α_sequential > α_parallel',
+        'C3_sequential_greater': {
+            'condition': 'α_sequential > α_parallel',
             'difference': alpha_seq - alpha_par,
             'supported': alpha_seq > alpha_par,
             'strongly_supported': ci_seq[0] > ci_par[1]  # CIs don't overlap
@@ -287,9 +287,9 @@ def check_arc_predictions(results_sequential: Dict,
     n_strongly = sum(1 for t in tests.values() if t['strongly_supported'])
 
     tests['summary'] = {
-        'predictions_supported': n_supported,
-        'predictions_strongly_supported': n_strongly,
-        'total_predictions': len(tests),  # the three checks; the summary is added after this count
+        'checks_supported': n_supported,
+        'checks_strongly_supported': n_strongly,
+        'total_checks': len(tests),  # the three checks; the summary is added after this count
         'majority_of_checks_supported': n_supported >= 2,
         'no_check_supported': n_supported == 0
     }
@@ -404,11 +404,11 @@ def main():
         for key, test in pt.items():
             if key != 'summary':
                 status = "✓ SUPPORTED" if test['supported'] else "✗ NOT SUPPORTED"
-                print(f"  {test['prediction']}: {status}")
+                print(f"  {test['condition']}: {status}")
 
         summary = pt['summary']
-        print(f"\nOVERALL: {summary['predictions_supported']}/{summary['total_predictions']} "
-              f"predictions supported")
+        print(f"\nOVERALL: {summary['checks_supported']}/{summary['total_checks']} "
+              f"checks supported")
         if summary['majority_of_checks_supported']:
             print("→ Two or more of this toolkit's three checks are supported on this data. The checks are not the theory registration's propositions, so no verdict on the ARC Principle follows from them.")
         elif summary['no_check_supported']:
