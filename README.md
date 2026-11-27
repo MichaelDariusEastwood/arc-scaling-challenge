@@ -52,12 +52,12 @@ The geometric scaling exponent `α = d/(d+1)` is **acknowledged prior art**. It 
 
 **Can you falsify the ARC Principle?**
 
-The ARC Principle proposes that recursive self-correction on structured asymmetry produces super-linear capability gains:
+Law I, the ARC Principle, as registered, states that usable capability is a power of recursive depth, with the exponent measured rather than assumed. The one interpretable fit on today's frozen models is inconclusive, with both point estimates below one, and super-linear scaling has not been observed. The form under test:
 
 ```
 U = I × R^α
 
-where α = 1/(1-β)
+where α = 1/(1-β_L)
 ```
 
 This repository provides standardised tools for researchers to:
@@ -190,10 +190,10 @@ python analysis/python/arc_analysis.py --data examples/data/example_ai_sequentia
 python -m pytest tests/ -v
 ```
 
-**Expected output for example data:**
-- Sequential α ≈ 2.2 (super-linear)
-- Parallel α ≈ 0.08 (near-zero)
-- All 3 ARC predictions SUPPORTED
+**Expected output for the synthetic example data.** The example file is built to exercise the code, so these numbers describe that file and are not results about any model:
+- Sequential exponent ≈ 0.88 (interval 0.72 to 1.05), near one, so the check that it exceeds one is not supported
+- Parallel exponent ≈ 0.08 (near zero)
+- Two of the three prediction checks are supported on this file, and the sequential one is not
 
 See `examples/expected_output/example_results.json` for full expected results.
 
@@ -262,9 +262,9 @@ All submissions must include:
 | Submitter | Domain | System | α (Sequential) | α (Parallel) | Status |
 |-----------|--------|--------|----------------|--------------|--------|
 | Eastwood (2026) | AI | DeepSeek R1 | 2.2 [1.5, 3.0], retracted | 0.0 | Sequential estimate retracted, see Paper II |
-| — | — | — | — | — | Awaiting submissions |
+| (none yet) | | | | | Awaiting submissions |
 
-**Retracted:** the early single-model estimate (α ≈ 2.24, rounded to 2.2) did not replicate cross-architecturally; the cross-architecture fit is ≈ 0.49. Do not quote 2.24 or 2.2 as an established constant. See `RELEASE-NOTES-v1.0.md` and Paper II.
+**Retracted:** the early single-model estimate of about 2.24 (DeepSeek R1, twelve problems; 2.2 in the table above) is retracted. It did not replicate across architectures, and Paper II reads it as an artefact of compressed dynamic range and small sample size. Paper II's later runs give error-decay exponents, which are not the capability exponent of Law I, the ARC Principle. Do not quote 2.24 or 2.2. See `RELEASE-NOTES-v1.0.md` and Paper II.
 
 ---
 
