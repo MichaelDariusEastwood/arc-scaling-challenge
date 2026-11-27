@@ -63,19 +63,21 @@ where α = 1/(1-β_L)
 This repository provides standardised tools for researchers to:
 1. **Measure** α in their own systems
 2. **Compare** results across domains
-3. **Falsify** the framework if it fails
+3. **Report** every result, those that count against the framework included, with its data and code
 
 ---
 
-## The Predictions
+## The checks this toolkit runs
 
-| Prediction | Condition | Falsified If |
+The toolkit fits α to a set of measurements and runs three checks of its own, C1 to C3. The toolkit's checks C1 to C3 are its own and are not the theory registration's propositions P1 to P23.
+
+| Check | Condition | Supported where |
 |------------|-----------|--------------|
-| **P1** | Sequential recursion | α ≤ 1 |
-| **P2** | Parallel recursion | α ≥ 1 |
-| **P3** | No frozen disorder | α > 1 observed |
-| **P4** | Cross-domain | α values diverge significantly |
-| **P5** | Theoretical bound | α > 2 consistently observed |
+| **C1** | Sequential recursion | the lower end of the interval on α is above 1 |
+| **C2** | Parallel recursion | the upper end of the interval on α is below 1 |
+| **C3** | Sequential against parallel | the sequential α is above the parallel α (strongly where the two intervals do not overlap) |
+
+A result from these checks is a measurement on the data given, not a verdict on any of the ARC Theory's laws. The registered propositions, their decision rules and what would refute each are in the theory registration, DOI [10.17605/OSF.IO/P8CKQ](https://doi.org/10.17605/OSF.IO/P8CKQ).
 
 ---
 

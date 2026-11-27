@@ -187,13 +187,13 @@ class TestARCPredictions:
 
         result = check_arc_predictions(sequential, parallel)
 
-        assert result['P1_sequential_superlinear']['supported']
-        assert result['P2_parallel_sublinear']['supported']
-        assert result['P3_sequential_greater']['supported']
+        assert result['C1_sequential_superlinear']['supported']
+        assert result['C2_parallel_sublinear']['supported']
+        assert result['C3_sequential_greater']['supported']
         assert result['summary']['majority_of_checks_supported']
         assert not result['summary']['no_check_supported']
-        assert result['summary']['predictions_supported'] == 3
-        assert result['summary']['total_predictions'] == 3
+        assert result['summary']['checks_supported'] == 3
+        assert result['summary']['total_checks'] == 3
 
     def test_predictions_falsified(self):
         """Test when predictions are falsified."""
@@ -210,7 +210,7 @@ class TestARCPredictions:
         result = check_arc_predictions(sequential, parallel)
 
         # P1 should not be supported (sequential not superlinear)
-        assert not result['P1_sequential_superlinear']['strongly_supported']
+        assert not result['C1_sequential_superlinear']['strongly_supported']
 
     def test_strong_support_requires_ci_separation(self):
         """Test that strong support requires CI separation."""
@@ -227,7 +227,7 @@ class TestARCPredictions:
         result = check_arc_predictions(sequential, parallel)
 
         # Not strongly supported because CI includes 1
-        assert not result['P1_sequential_superlinear']['strongly_supported']
+        assert not result['C1_sequential_superlinear']['strongly_supported']
 
 
 class TestEdgeCases:
